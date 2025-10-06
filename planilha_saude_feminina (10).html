@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Diário de Autocuidado 🌸</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #ffeef8 0%, #ffe8f0 100%);
+            padding: 15px;
+            font-size: 15px;
+        }
+        
+        .container {
+            max-width: 650px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(255, 105, 180, 0.2);
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #ff6b9d 0%, #ffa8c5 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 1.6em;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1em;
+            opacity: 0.95;
+        }
+        
+        .content {
+            padding: 20px;
+        }
+        
+        .intro {
+            background: #fff9fc;
+            border-left: 4px solid #ff6b9d;
+            padding: 15px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            line-height: 1.6;
+        }
+        
+        .intro h3 {
+            color: #ff6b9d;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        
+        .day-section {
+            margin-bottom: 25px;
+            border: 2px solid #ffe8f0;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .day-header {
+            background: linear-gradient(135deg, #ff6b9d 0%, #ffa8c5 100%);
+            color: white;
+            padding: 15px 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        
+        .day-content {
+            padding: 20px;
+        }
+        
+        .section-title {
+            color: #ff6b9d;
+            font-weight: 700;
+            margin: 20px 0 12px 0;
+            font-size: 1.1em;
+        }
+        
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            border: 2px solid #ffe8f0;
+        }
+        
+        .checkbox-item input[type="checkbox"] {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            accent-color: #ff6b9d;
+            flex-shrink: 0;
+        }
+        
+        .checkbox-item label {
+            flex: 1;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        
+        .text-input {
+            width: 100%;
+            border: 2px solid #ffe8f0;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 1em;
+            background: white;
+            margin-bottom: 12px;
+            font-family: inherit;
+        }
+        
+        .text-input:focus {
+            outline: none;
+            border-color: #ff6b9d;
+        }
+        
+        textarea.text-input {
+            min-height: 80px;
+            resize: vertical;
+        }
+        
+        .meal-label {
+            font-weight: 600;
+            color: #ff6b9d;
+            margin-bottom: 6px;
+            display: block;
+            font-size: 1em;
+        }
+        
+        .notes-box {
+            background: #fff9fc;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        
+        .notes-box h4 {
+            color: #ff6b9d;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .summary {
+            background: linear-gradient(135deg, #fff9fc 0%, #ffe8f0 100%);
+            padding: 25px 20px;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .summary h3 {
+            color: #ff6b9d;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        .summary p {
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 15px;
+        }
+        
+        .affirmation {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(255, 105, 180, 0.15);
+            font-size: 1.05em;
+            color: #ff6b9d;
+            font-weight: 600;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌸 Meu Diário de Autocuidado 🌸</h1>
+            <p>5 Dias para se Reconectar com sua Essência Feminina</p>
+        </div>
+        
+        <div class="content">
+            <div class="intro">
+                <h3>💕 Bem-vinda, linda!</h3>
+                <p>Este é seu espaço sagrado de autocuidado. Marque suas conquistas diárias e anote tudo com carinho. Você merece todo esse cuidado! ✨</p>
+            </div>
+            
+            <!-- DIA 1 -->
+            <div class="day-section">
+                <div class="day-header">Dia 1 - A Mulher que Você Era Antes</div>
+                <div class="day-content">
+                    
+                    <div class="section-title">💧 Água (marque cada copo que beber)</div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d1w1">
+                        <label for="d1w1">Copo 1</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d1w2">
+                        <label for="d1w2">Copo 2</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d1w3">
+                        <label for="d1w3">Copo 3</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d1w4">
+                        <label for="d1w4">Copo 4</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d1w5">
+                        <label for="d1w5">Copo 5</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d1w6">
+                        <label for="d1w6">Copo 6</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d1w7">
+                        <label for="d1w7">Copo 7</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d1w8">
+                        <label for="d1w8">Copo 8 (Meta: 2 litros! 🎉)</label>
+                    </div>
+                    
+                    <div class="section-title">👟 Atividade Física</div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d1ex1">
+                        <label for="d1ex1">Caminhada</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d1ex2">
+                        <label for="d1ex2">Alongamento</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d1ex3">
+                        <label for="d1ex3">Dança</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d1ex4">
+                        <label for="d1ex4">Yoga</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d1ex5">
+                        <label for="d1ex5">Academia</label>
+                    </div>
+                    <input type="text" class="text-input" placeholder="Quantos minutos? Como se sentiu? ✨">
+                    
+                    <div class="section-title">🍽️ Alimentação</div>
+                    <span class="meal-label">☀️ Café da Manhã</span>
+                    <input type="text" class="text-input" placeholder="O que você comeu?">
+                    
+                    <span class="meal-label">🌤️ Lanche da Manhã</span>
+                    <input type="text" class="text-input" placeholder="Frutas, castanhas...">
+                    
+                    <span class="meal-label">🍽️ Almoço</span>
+                    <input type="text" class="text-input" placeholder="Prato colorido...">
+                    
+                    <span class="meal-label">☕ Lanche da Tarde</span>
+                    <input type="text" class="text-input" placeholder="Chá, fruta...">
+                    
+                    <span class="meal-label">🌙 Jantar</span>
+                    <input type="text" class="text-input" placeholder="Refeição leve...">
+                    
+                    <div class="notes-box">
+                        <h4>✨ Como me senti hoje?</h4>
+                        <textarea class="text-input" placeholder="Anote aqui suas sensações, emoções e conquistas do dia... Este é seu espaço seguro! 💗"></textarea>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- DIA 2 -->
+            <div class="day-section">
+                <div class="day-header">Dia 2 - De Reativa a Receptiva</div>
+                <div class="day-content">
+                    
+                    <div class="section-title">💧 Água (marque cada copo que beber)</div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d2w1">
+                        <label for="d2w1">Copo 1</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d2w2">
+                        <label for="d2w2">Copo 2</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d2w3">
+                        <label for="d2w3">Copo 3</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d2w4">
+                        <label for="d2w4">Copo 4</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d2w5">
+                        <label for="d2w5">Copo 5</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d2w6">
+                        <label for="d2w6">Copo 6</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d2w7">
+                        <label for="d2w7">Copo 7</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d2w8">
+                        <label for="d2w8">Copo 8 (Meta: 2 litros! 🎉)</label>
+                    </div>
+                    
+                    <div class="section-title">👟 Atividade Física</div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d2ex1">
+                        <label for="d2ex1">Caminhada</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d2ex2">
+                        <label for="d2ex2">Alongamento</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d2ex3">
+                        <label for="d2ex3">Dança</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d2ex4">
+                        <label for="d2ex4">Yoga</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d2ex5">
+                        <label for="d2ex5">Academia</label>
+                    </div>
+                    <input type="text" class="text-input" placeholder="Quantos minutos? Como se sentiu? ✨">
+                    
+                    <div class="section-title">🍽️ Alimentação</div>
+                    <span class="meal-label">☀️ Café da Manhã</span>
+                    <input type="text" class="text-input" placeholder="O que você comeu?">
+                    
+                    <span class="meal-label">🌤️ Lanche da Manhã</span>
+                    <input type="text" class="text-input" placeholder="Frutas, castanhas...">
+                    
+                    <span class="meal-label">🍽️ Almoço</span>
+                    <input type="text" class="text-input" placeholder="Prato colorido...">
+                    
+                    <span class="meal-label">☕ Lanche da Tarde</span>
+                    <input type="text" class="text-input" placeholder="Chá, fruta...">
+                    
+                    <span class="meal-label">🌙 Jantar</span>
+                    <input type="text" class="text-input" placeholder="Refeição leve...">
+                    
+                    <div class="notes-box">
+                        <h4>✨ Como me senti hoje?</h4>
+                        <textarea class="text-input" placeholder="Consegui praticar a pausa? Como foi dar esse tempo para mim? 💗"></textarea>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- DIA 3 -->
+            <div class="day-section">
+                <div class="day-header">Dia 3 - Autoestima Feminina</div>
+                <div class="day-content">
+                    
+                    <div class="section-title">💧 Água (marque cada copo que beber)</div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d3w1">
+                        <label for="d3w1">Copo 1</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d3w2">
+                        <label for="d3w2">Copo 2</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d3w3">
+                        <label for="d3w3">Copo 3</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d3w4">
+                        <label for="d3w4">Copo 4</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d3w5">
+                        <label for="d3w5">Copo 5</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d3w6">
+                        <label for="d3w6">Copo 6</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d3w7">
+                        <label for="d3w7">Copo 7</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d3w8">
+                        <label for="d3w8">Copo 8 (Meta: 2 litros! 🎉)</label>
+                    </div>
+                    
+                    <div class="section-title">👟 Atividade Física</div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d3ex1">
+                        <label for="d3ex1">Caminhada</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d3ex2">
+                        <label for="d3ex2">Alongamento</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d3ex3">
+                        <label for="d3ex3">Dança</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d3ex4">
+                        <label for="d3ex4">Yoga</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d3ex5">
+                        <label for="d3ex5">Academia</label>
+                    </div>
+                    <input type="text" class="text-input" placeholder="Quantos minutos? Como se sentiu? ✨">
+                    
+                    <div class="section-title">🍽️ Alimentação</div>
+                    <span class="meal-label">☀️ Café da Manhã</span>
+                    <input type="text" class="text-input" placeholder="O que você comeu?">
+                    
+                    <span class="meal-label">🌤️ Lanche da Manhã</span>
+                    <input type="text" class="text-input" placeholder="Frutas, castanhas...">
+                    
+                    <span class="meal-label">🍽️ Almoço</span>
+                    <input type="text" class="text-input" placeholder="Prato colorido...">
+                    
+                    <span class="meal-label">☕ Lanche da Tarde</span>
+                    <input type="text" class="text-input" placeholder="Chá, fruta...">
+                    
+                    <span class="meal-label">🌙 Jantar</span>
+                    <input type="text" class="text-input" placeholder="Refeição leve...">
+                    
+                    <div class="notes-box">
+                        <h4>✨ Como me senti hoje?</h4>
+                        <textarea class="text-input" placeholder="Me elogiei hoje? Reconheci minhas qualidades? Como foi? 💗"></textarea>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- DIA 4 -->
+            <div class="day-section">
+                <div class="day-header">Dia 4 - Feminilidade Magnética</div>
+                <div class="day-content">
+                    
+                    <div class="section-title">💧 Água (marque cada copo que beber)</div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d4w1">
+                        <label for="d4w1">Copo 1</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d4w2">
+                        <label for="d4w2">Copo 2</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d4w3">
+                        <label for="d4w3">Copo 3</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d4w4">
+                        <label for="d4w4">Copo 4</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d4w5">
+                        <label for="d4w5">Copo 5</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d4w6">
+                        <label for="d4w6">Copo 6</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d4w7">
+                        <label for="d4w7">Copo 7</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d4w8">
+                        <label for="d4w8">Copo 8 (Meta: 2 litros! 🎉)</label>
+                    </div>
+                    
+                    <div class="section-title">👟 Atividade Física</div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d4ex1">
+                        <label for="d4ex1">Caminhada</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d4ex2">
+                        <label for="d4ex2">Alongamento</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d4ex3">
+                        <label for="d4ex3">Dança</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d4ex4">
+                        <label for="d4ex4">Yoga</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d4ex5">
+                        <label for="d4ex5">Academia</label>
+                    </div>
+                    <input type="text" class="text-input" placeholder="Quantos minutos? Como se sentiu? ✨">
+                    
+                    <div class="section-title">🍽️ Alimentação</div>
+                    <span class="meal-label">☀️ Café da Manhã</span>
+                    <input type="text" class="text-input" placeholder="O que você comeu?">
+                    
+                    <span class="meal-label">🌤️ Lanche da Manhã</span>
+                    <input type="text" class="text-input" placeholder="Frutas, castanhas...">
+                    
+                    <span class="meal-label">🍽️ Almoço</span>
+                    <input type="text" class="text-input" placeholder="Prato colorido...">
+                    
+                    <span class="meal-label">☕ Lanche da Tarde</span>
+                    <input type="text" class="text-input" placeholder="Chá, fruta...">
+                    
+                    <span class="meal-label">🌙 Jantar</span>
+                    <input type="text" class="text-input" placeholder="Refeição leve...">
+                    
+                    <div class="notes-box">
+                        <h4>✨ Como me senti hoje?</h4>
+                        <textarea class="text-input" placeholder="Consegui receber sem minimizar? Percebi minha energia feminina? 💗"></textarea>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- DIA 5 -->
+            <div class="day-section">
+                <div class="day-header">Dia 5 - A Mulher Que Você Está Destinada a Ser</div>
+                <div class="day-content">
+                    
+                    <div class="section-title">💧 Água (marque cada copo que beber)</div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d5w1">
+                        <label for="d5w1">Copo 1</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d5w2">
+                        <label for="d5w2">Copo 2</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d5w3">
+                        <label for="d5w3">Copo 3</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d5w4">
+                        <label for="d5w4">Copo 4</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d5w5">
+                        <label for="d5w5">Copo 5</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d5w6">
+                        <label for="d5w6">Copo 6</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d5w7">
+                        <label for="d5w7">Copo 7</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d5w8">
+                        <label for="d5w8">Copo 8 (Meta: 2 litros! 🎉)</label>
+                    </div>
+                    
+                    <div class="section-title">👟 Atividade Física</div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d5ex1">
+                        <label for="d5ex1">Caminhada</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d5ex2">
+                        <label for="d5ex2">Alongamento</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d5ex3">
+                        <label for="d5ex3">Dança</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d5ex4">
+                        <label for="d5ex4">Yoga</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="d5ex5">
+                        <label for="d5ex5">Academia</label>
+                    </div>
+                    <input type="text" class="text-input" placeholder="Quantos minutos? Como se sentiu? ✨">
+                    
+                    <div class="section-title">🍽️ Alimentação</div>
+                    <span class="meal-label">☀️ Café da Manhã</span>
+                    <input type="text" class="text-input" placeholder="O que você comeu?">
+                    
+                    <span class="meal-label">🌤️ Lanche da Manhã</span>
+                    <input type="text" class="text-input" placeholder="Frutas, castanhas...">
+                    
+                    <span class="meal-label">🍽️ Almoço</span>
+                    <input type="text" class="text-input" placeholder="Prato colorido...">
+                    
+                    <span class="meal-label">☕ Lanche da Tarde</span>
+                    <input type="text" class="text-input" placeholder="Chá, fruta...">
+                    
+                    <span class="meal-label">🌙 Jantar</span>
+                    <input type="text" class="text-input" placeholder="Refeição leve...">
+                    
+                    <div class="notes-box">
+                        <h4>✨ Como me senti hoje?</h4>
+                        <textarea class="text-input" placeholder="Que mulher eu me tornei nesses 5 dias? O que mudou em mim? 💗"></textarea>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="summary">
+                <h3>🌸 Parabéns por Cuidar de Você! 🌸</h3>
+                <p>Cada copo de água, cada refeição saudável, cada momento de autocuidado é um ato de amor próprio. Você está se reconectando com sua essência, nutrindo não apenas o corpo, mas também a alma.</p>
+                <div class="affirmation">
+                    "Eu mereço saúde, bem-estar e todo o cuidado que dedico a mim mesma. Meu corpo é meu templo sagrado." 💕
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
